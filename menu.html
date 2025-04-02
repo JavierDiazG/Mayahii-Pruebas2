@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Inicio - Portafolio JS</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="menu-icono" onclick="toggleMenu()">
+      <img src="images/menu-icono.png" alt="Menú">
+    </div>
+    <h1 class="titulo-header">Sitio Web con JavaScript</h1>
+  </header>
+
+  <!-- MENÚ DESPLEGABLE -->
+  <nav id="menu" class="menu">
+    <a href="menu.html">Inicio</a>
+    <a href="index.html">Portada</a>
+    <a href="marquesina.html">Marquesina</a>
+    <a href="boton.html">Botón interactivo</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section class="blog-post">
+      <h2 class="blog-titulo">Explorando JavaScript en la Web</h2>
+
+      <!-- Imagen ajustable -->
+      <div class="blog-imagen">
+        <img src="images/blog-imagen.jpg" alt="Imagen del blog">
+      </div>
+
+      <!-- Texto tipo blog -->
+      <div class="blog-contenido">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla fermentum mi, at posuere tellus facilisis nec. Morbi et orci ac justo vehicula tempus. In in ex eu elit luctus ullamcorper. Donec porta massa ac tristique cursus. Nullam sed sem a ligula vehicula malesuada eget in est.
+        </p>
+      </div>
+
+      <!-- Autor -->
+      <p class="blog-autor">Escrito por: Javier Díaz</p>
+    </section>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="menu.js"></script>
+</body>
+</html>

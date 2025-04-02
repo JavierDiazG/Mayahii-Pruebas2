@@ -1,0 +1,123 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Menú */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    padding: 10px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .menu a:hover {
+    background-color: #555;
+  }
+  
+  /* Imagen principal */
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Blog */
+  .blog {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* Texto + Imagen */
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .texto {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .imagen-contenido {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .imagen-contenido img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .pie-foto {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Galería */
+  .galeria {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .galeria-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .galeria-contenedor figure {
+    width: 250px;
+  }
+  
+  .galeria-contenedor img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  

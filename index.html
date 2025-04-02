@@ -2,91 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi portafolio JavaScript</title>
-
-  <!-- Estilos básicos para diseño y colores -->
-  <style>
-    body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      margin: 0; /* Quitamos espacio por defecto */
-      padding: 0;
-    }
-
-    /* Estilo del encabezado */
-    header {
-      background-color: #333366;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    /* Estilo del título dentro del header */
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    /* Menú de navegación */
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Contenido principal */
-    main {
-      text-align: center;
-      padding: 40px;
-    }
-
-    .imagen-portada {
-      width: 200px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .info {
-      margin-top: 30px;
-      font-size: 18px;
-    }
-  </style>
+  <title>Portada del Portafolio</title>
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
-  <!-- Encabezado con menú -->
+  <!-- HEADER con botón de imagen -->
   <header>
-    <h1>Mi portafolio JavaScript</h1>
-    <nav>
-      <!-- Los enlaces pueden apuntar a otras páginas que crearás después -->
-      <a href="#">Portada</a>
-      <a href="marquesina.html">Marquesina</a>
-      <a href="boton.html">Boton</a>
-      <a href="#">Contacto</a>
-    </nav>
+    <div class="menu-icono" onclick="toggleMenu()">
+      <img src="images/menu-icono.png" alt="Menú">
+    </div>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
   </header>
 
-  <!-- Contenido principal -->
-  <main>
-    <!-- Imagen de portada -->
-    <img src="images/foto perfil redes.jpg" alt="Mi imagen de portada" class="imagen-portada">
+  <!-- MENÚ desplegable -->
+  <nav id="menu" class="menu">
+    <a href="menu.html">Inicio</a>
+    <a href="index.html">Portada</a>
+    <a href="marquesina.html">Marquesina</a>
+    <a href="boton.html">Botón interactivo</a>
+  </nav>
 
-    <!-- Datos personales -->
-    <div class="info">
-      <p><strong>Nombre:</strong> Javier Arturo Díaz González</p>
-      <p><strong>Campus:</strong> UVM Campus Puebla</p>
-      <p><strong>Docente:</strong> El Javi</p>
-    </div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <h2>Portada</h2>
+    <p><strong>Nombre:</strong> Javier Arturo Díaz González</p>
+    <p><strong>Campus:</strong> UVM Campus Puebla</p>
+    <p><strong>Docente:</strong> Profe Javi</p>
+
+    <img src="images/foto-perfil.jpg" alt="Foto de perfil" style="width: 200px; border-radius: 10px; margin-top: 20px;">
   </main>
 
+  <!-- SCRIPTS -->
+  <script src="menu.js"></script>
 </body>
 </html>

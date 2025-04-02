@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio con menú lateral</title>
+  <link rel="stylesheet" href="menu-lateral.css">
+  <script src="https://kit.fontawesome.com/a2e0e6da3b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Botón flotante para abrir el menú -->
+  <div class="toggle-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menú lateral -->
+  <nav id="sidebar" class="sidebar">
+    <a href="menu.html"><i class="fas fa-home"></i> Inicio</a>
+    <a href="index.html"><i class="fas fa-user"></i> Portada</a>
+    <a href="marquesina.html"><i class="fas fa-scroll"></i> Marquesina</a>
+    <a href="boton.html"><i class="fas fa-hand-pointer"></i> Botón Interactivo</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <h1>Bienvenido</h1>
+    <p>Este es un ejemplo de un menú lateral interactivo con opacidad, que se mantiene visible al hacer scroll.</p>
+    <p style="margin-top: 1000px;">Contenido al final para probar el scroll.</p>
+  </main>
+
+  <script src="menu-lateral.js"></script>
+</body>
+</html>
