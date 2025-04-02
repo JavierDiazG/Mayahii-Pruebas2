@@ -2,95 +2,39 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Marquesina con JavaScript</title>
-
-  <!-- Estilos generales (puedes reutilizar los de index.html) -->
-  <style>
-    body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Estilo del encabezado y menú */
-    header {
-      background-color: #333366;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Estilo específico para la marquesina */
-    main {
-      text-align: center;
-      padding: 40px;
-    }
-
-    .marquesina-container {
-      width: 100%;
-      overflow: hidden;
-      border: 2px solid #333;
-      background-color: #ffffff;
-      height: 50px;
-      position: relative;
-      margin-top: 30px;
-    }
-
-    .marquesina-texto {
-      position: absolute;
-      white-space: nowrap;
-      font-size: 20px;
-      color: #333366;
-    }
-  </style>
+  <title>Marquesina - Portafolio JS</title>
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
-  <!-- Header con navegación igual al de index.html -->
+  <!-- HEADER con menú -->
   <header>
-    <h1>Mi portafolio JavaScript</h1>
-    <nav>
-      <a href="index.html">Portada</a>
-      <a href="marquesina.html">Marquesina</a>
-      <a href="boton.html">Boton</a>
-      <a href="#">Contacto</a>
-    </nav>
+    <div class="menu-icono" onclick="toggleMenu()">
+      <img src="images/menu-icono.png" alt="Menú">
+    </div>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
   </header>
 
-  <!-- Contenido de la página -->
-  <main>
-    <h2>Ejemplo de Marquesina con JavaScript</h2>
+  <!-- MENÚ desplegable -->
+  <nav id="menu" class="menu">
+    <a href="menu.html">Inicio</a>
+    <a href="index.html">Portada</a>
+    <a href="marquesina.html">Marquesina</a>
+    <a href="boton.html">Botón interactivo</a>
+  </nav>
 
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <h2>Marquesina Animada</h2>
     <div class="marquesina-container">
       <div class="marquesina-texto" id="textoMarquesina">
-        ¡Bienvenido a mi portafolio de JavaScript!
+        ¡Bienvenido a mi portafolio de JavaScript! 🚀
       </div>
     </div>
   </main>
 
-  <!-- Enlazamos el archivo script.js -->
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
-
+  <script src="menu.js"></script>
 </body>
 </html>

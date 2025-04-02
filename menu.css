@@ -100,4 +100,39 @@ body {
     max-height: 400px;
     object-fit: cover;
     border-radius:
-  
+  }
+/* --- MARQUESINA --- */
+.marquesina-container {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #333;
+  background-color: #ffffff;
+  height: 50px;
+  position: relative;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.marquesina-texto {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #333366;
+  left: 100%;
+}
+/* --- BOTÓN INTERACTIVO --- */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}

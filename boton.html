@@ -2,83 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Botón interactivo</title>
-
-  <style>
-    body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      background-color: #333366;
-      padding: 20px;
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 40px;
-    }
-
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <title>Botón Interactivo - Portafolio JS</title>
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
-  <!-- Header con navegación -->
+  <!-- HEADER con menú -->
   <header>
-    <h1>Mi portafolio JavaScript</h1>
-    <nav>
-      <a href="index.html">Portada</a>
-      <a href="marquesina.html">Marquesina</a>
-      <a href="boton.html">Botón</a>
-      <a href="#">Contacto</a>
-    </nav>
+    <div class="menu-icono" onclick="toggleMenu()">
+      <img src="images/menu-icono.png" alt="Menú">
+    </div>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
   </header>
 
-  <!-- Contenido principal -->
+  <!-- MENÚ desplegable -->
+  <nav id="menu" class="menu">
+    <a href="menu.html">Inicio</a>
+    <a href="index.html">Portada</a>
+    <a href="marquesina.html">Marquesina</a>
+    <a href="boton.html">Botón interactivo</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
     <h2>Botón Interactivo</h2>
     <button id="miBoton">Haz clic en mí</button>
   </main>
 
-  <!-- Llamamos al script del botón -->
+  <!-- SCRIPTS -->
   <script src="boton.js"></script>
-
+  <script src="menu.js"></script>
 </body>
 </html>
