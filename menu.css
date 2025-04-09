@@ -136,3 +136,65 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+/* --- CARRUSEL DE CONTENIDO --- */
+.carrusel {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.carrusel-titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333366;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carrusel-slide {
+  display: flex;
+  transition: transform 0.4s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.descripcion {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.carrusel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #333366;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: transform 0.2s ease;
+}
+
+.carrusel-btn:hover {
+  transform: scale(1.2);
+}
+
+

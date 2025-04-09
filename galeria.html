@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portada del Portafolio</title>
+  <!-- Se enlazan los estilos del menú (header) y los estilos propios de la galería -->
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+ <!-- HEADER con botón de imagen -->
+ <header>
+    <div class="menu-icono" onclick="toggleMenu()">
+      <img src="images/menu-icono.png" alt="Menú">
+    </div>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
+  </header>
+
+  <!-- MENÚ desplegable -->
+  <nav id="menu" class="menu">
+    <a href="menu.html">Galeria</a>
+    <a href="index.html">Portada</a>
+    <a href="marquesina.html">Marquesina</a>
+    <a href="boton.html">Botón interactivo</a>
+  </nav>
+
+  <!-- GALERÍA INTERACTIVA -->
+  <section class="gallery">
+    <!-- Se muestran 6 imágenes, cada una dentro de un contenedor con sombra -->
+    <div class="gallery-item">
+      <img src="images/proyecto1.png" alt="Descripción de la imagen 1" class="gallery-img">
+    </div>
+    <div class="gallery-item">
+      <img src="images/proyecto2.png" alt="Descripción de la imagen 2" class="gallery-img">
+    </div>
+    <div class="gallery-item">
+      <img src="images/proyecto3.jpg" alt="Descripción de la imagen 3" class="gallery-img">
+    </div>
+    <div class="gallery-item">
+      <img src="images/proyecto4.jpg" alt="Descripción de la imagen 4" class="gallery-img">
+    </div>
+    <div class="gallery-item">
+      <img src="images/proyecto5.jpg" alt="Descripción de la imagen 5" class="gallery-img">
+    </div>
+    <div class="gallery-item">
+      <img src="images/proyecto6.jpg" alt="Descripción de la imagen 6" class="gallery-img">
+    </div>
+  </section>
+
+  <!-- Modal para ampliar la imagen (Lightbox) -->
+  <div id="modal" class="modal">
+    <!-- Botón para cerrar el modal -->
+    <span id="modalClose" class="modal-close">&times;</span>
+    <!-- Imagen ampliada -->
+    <img id="modalImg" class="modal-content" alt="">
+    <!-- Pie de foto con la descripción de la imagen -->
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+  <!-- Se enlaza el script para la funcionalidad de la galería -->
+  <script src="carrusel.js"></script>
+</body>
+</html>
