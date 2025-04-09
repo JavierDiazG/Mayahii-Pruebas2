@@ -197,4 +197,47 @@ button:hover {
   transform: scale(1.2);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 102, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.titulo-header {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+}
+
+.nav-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.nav-enlaces a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-enlaces a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 
