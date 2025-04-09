@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrusel de Imágenes</title>
+  <link rel="stylesheet" href="menu.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(51, 51, 102, 0.85);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .titulo-header {
+      margin: 0;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav-enlaces {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-enlaces a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 6px 10px;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .nav-enlaces a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    main {
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carrusel {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .carrusel-imagenes {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-imagenes img {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .indicadores {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .indicadores span {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .indicadores .activo {
+      background-color: #333366;
+    }
+
+    /* Imagen ampliada */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .modal p {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
+    <nav class="nav-enlaces">
+      <a href="menu.html">Inicio</a>
+      <a href="index.html">Portada</a>
+      <a href="marquesina.html">Marquesina</a>
+      <a href="boton.html">Botón</a>
+      <a href="carruselimagenes.html">Carrusel</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carrusel">
+      <div class="carrusel-imagenes" id="carruselImagenes">
+        <img src="images/proyecto1.png" alt="Proyecto 1" onclick="ampliarImagen(this)">
+        <img src="images/proyecto2.png" alt="Proyecto 2" onclick="ampliarImagen(this)">
+        <img src="images/proyecto3.jpg" alt="Proyecto 3" onclick="ampliarImagen(this)">
+        <img src="images/proyecto4.jpg" alt="Proyecto 4" onclick="ampliarImagen(this)">
+        <img src="images/proyecto5.jpg" alt="Proyecto 5" onclick="ampliarImagen(this)">
+        <img src="images/proyecto6.jpg" alt="Proyecto 6" onclick="ampliarImagen(this)">
+      </div>
+    </div>
+    <div class="indicadores" id="indicadores"></div>
+  </main>
+
+  <!-- Modal para imagen ampliada -->
+  <div class="modal" id="modal">
+    <img id="imagenAmpliada" src="" alt="">
+    <p id="textoAlt"></p>
+  </div>
+
+  <script>
+    const carrusel = document.getElementById('carruselImagenes');
+    const indicadores = document.getElementById('indicadores');
+    const totalImagenes = carrusel.children.length;
+    let indice = 0;
+
+    for (let i = 0; i < totalImagenes; i++) {
+      const punto = document.createElement('span');
+      if (i === 0) punto.classList.add('activo');
+      punto.addEventListener('click', () => moverCarrusel(i));
+      indicadores.appendChild(punto);
+    }
+
+    function moverCarrusel(nuevoIndice) {
+      indice = nuevoIndice;
+      carrusel.style.transform = `translateX(-${indice * 100}%)`;
+      document.querySelectorAll('.indicadores span').forEach((el, i) => {
+        el.classList.toggle('activo', i === indice);
+      });
+    }
+
+    setInterval(() => {
+      indice = (indice + 1) % totalImagenes;
+      moverCarrusel(indice);
+    }, 5000);
+
+    function ampliarImagen(img) {
+      const modal = document.getElementById("modal");
+      const imgAmpliada = document.getElementById("imagenAmpliada");
+      const textoAlt = document.getElementById("textoAlt");
+
+      imgAmpliada.src = img.src;
+      textoAlt.textContent = img.alt;
+      modal.style.display = "flex";
+    }
+
+    document.getElementById("modal").addEventListener("click", function() {
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
