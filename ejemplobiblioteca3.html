@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Biblioteca JS - Chart.js</title>
+  <link rel="stylesheet" href="ejemplobiblioteca1.css">
+  <!-- Biblioteca Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- HEADER reutilizable -->
+  <header>
+    <h1 class="titulo-header">Mi Portafolio JavaScript</h1>
+    <nav class="nav-enlaces">
+      <a href="menu.html">Inicio</a>
+      <a href="index.html">Portada</a>
+      <a href="marquesina.html">Marquesina</a>
+      <a href="boton.html">Botón</a>
+      <a href="carruselimagenes.html">Carrusel</a>
+      <a href="ejemplobiblioteca1.html">Ejemplo 1</a>
+      <a href="ejemplobiblioteca2.html">Ejemplo 2</a>
+      <a href="ejemplobiblioteca3.html">Ejemplo 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="biblioteca">
+      <h2>Participación en Proyectos</h2>
+      <div class="slide-box">
+        <canvas id="graficaProyectos"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para generar gráfica -->
+  <script>
+    const ctx = document.getElementById('graficaProyectos').getContext('2d');
+    const grafica = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['EcoVida', 'Huertos', 'Educación Verde', 'Movilidad', 'Reciclaje'],
+        datasets: [{
+          label: 'Número de participantes',
+          data: [120, 90, 70, 40, 50],
+          backgroundColor: 'rgba(51, 51, 102, 0.7)',
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Proyectos Ambientales por Participación'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
